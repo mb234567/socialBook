@@ -8,7 +8,7 @@
     "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
   "dependencies": {
-    "@babel/runtime": "^7.17.9",
+    "@babel/runtime": "^7.18.3",
     "@popperjs/core": "^2.11.5",
     "bootstrap": "^5.1.3",
     "jquery": "^3.6.0",
