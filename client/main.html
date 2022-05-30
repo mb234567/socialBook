@@ -1,0 +1,78 @@
+<head>
+  <title>Social Book</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+</head> 
+
+
+<body>
+  <div class="container">
+    {{> nav}}
+    {{> main}}
+  </div>
+</body>
+
+<template name="nav">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-2 mb-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Social Book</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-add" href="#">Add</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</template>
+
+<template name="main">
+  <div class="row">
+    {{> profile}}
+  </div>
+
+  {{> addProf}}
+  {{> viewProf}} 
+  {{> ConfirmDel}} 
+
+</template>
+
+<template name="profile">
+  {{#each profiles}}
+  <div class="col-md-4" id = "{{_id}}">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 text-primary">World</strong>
+        <h3 class="mb-0">{{fname}}</h3>
+        <div class="mb-1 text-muted">Nov 12</div>
+        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional
+          content.</p>
+       
+        <a href="#" class="stretched-link js-view">Continue reading</a>
+      </div>
+      <div class="col-auto d-none d-lg-block profHeight">
+        <img class="w-100" src="{{picPath}}" alt="">
+        <!-- <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img"
+          aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title>
+          <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+            dy=".3em">Thumbnail</text>
+        </svg> -->
+
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</template>
+

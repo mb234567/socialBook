@@ -1,0 +1,60 @@
+<template name="addProf">
+    <div class="modal" tabindex="-1" id="addModal" data-bs-backdrop="static" data-bs-keyboard="false">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="input-group mb-3">
+              <img class="w-50" id="displayPic" src="unisex-avatar.png" alt="">
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Profile Picture</span>
+              <input id="profPic" type="text" class="form-control" placeholder="Paste profile picture URL"
+                aria-label="image" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon2">First Name</span>
+              <input id="firstN" type="text" class="form-control" placeholder="Please enter the first name"
+                aria-label="first name" aria-describedby="basic-addon2">
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon3">Last Name</span>
+              <input id="lastN" type="text" class="form-control" placeholder="Please enter the last name"
+                aria-label="last name" aria-describedby="basic-addon3">
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon4">Age</span>
+              <input type="number" min="1" class="form-control" placeholder="Please enter the age" aria-label="last name"
+                aria-describedby="basic-addon4">
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon5">Sex</span>
+              <div class="addFormBorder">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="female">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Female
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="male" checked>
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Male
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary js-saveProfile">Add Profile</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  
+  
