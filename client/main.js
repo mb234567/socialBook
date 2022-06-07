@@ -8,6 +8,8 @@ import './main.html';
 import  './viewprofile/viewprofile.html';
 import './addProfile/addProfile.html'; 
 import './Navbar/Navbar.html'; 
+import './Profile/Profile.html';
+import './Profile/Profile.js';
 import './ConfirmDel/ConfirmDel.html'; 
 import './ConfirmDel/ConfirmDel.js';
 
@@ -78,11 +80,7 @@ let validateAddForm = (fn, ln) => {
   return valid;
 }
 
-Template.profile.helpers({
-  profiles() {
-    return socialdb.find();
-  }
-});
+
 
 /*
 profile picture
